@@ -13,7 +13,20 @@
         <receiver
             android:name=".Receiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true">
+        
+         <intent-filter>
+
+                <action android:name="android.intent.action.HEADSET_PLUG" />
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+
+
+            </intent-filter>
+        
+        </receiver>
 
         <activity android:name=".MainActivity">
             <intent-filter>
